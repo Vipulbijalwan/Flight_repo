@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": "https://api.github.com/Vipulbijalwan/Flight_repo/tree/main/dataSet/"
+					"url": "https://api.github.com/repos/Vipulbijalwan/Flight_repo/contents/dataSet"
 				}
 			}
 		],
