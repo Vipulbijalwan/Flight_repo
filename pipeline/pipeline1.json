@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Web1",
+				"name": "Get All Url From Github",
 				"type": "WebActivity",
 				"dependsOn": [],
 				"policy": {
@@ -20,11 +20,11 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEach Make Array",
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Web1",
+						"activity": "Get All Url From Github",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -39,7 +39,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "Copy data from git to gen 2",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -84,11 +84,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText1",
+									"referenceName": "DelimitedText3",
 									"type": "DatasetReference",
 									"parameters": {
-										"FileURL": {
-											"value": "@item().download_url",
+										"RelativePath": {
+											"value": "@{replace(item().download_url, 'https://raw.githubusercontent.com/', '')}\n",
 											"type": "Expression"
 										}
 									}
@@ -96,7 +96,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText2",
+									"referenceName": "DelimitedText4",
 									"type": "DatasetReference"
 								}
 							]
