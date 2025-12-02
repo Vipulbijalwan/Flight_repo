@@ -1,0 +1,9 @@
+{
+	"name": "flight-datafact",
+	"location": "eastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d385788d-b38c-44b0-87b5-770cc7109924",
+		"tenantId": "8879e4db-f16a-4a28-85d5-4703ac13e4a7"
+	}
+}
